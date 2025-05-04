@@ -165,7 +165,7 @@ def deforum_api(_: gr.Blocks, app: FastAPI):
 
     # List all batches and theit job ids
     @app.get("/deforum_api/batches")
-    async def list_batches(id: str):
+    async def list_batches():
         return JobStatusTracker().batches
 
     # Show the details of all jobs in a batch
